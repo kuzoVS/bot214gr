@@ -13,7 +13,7 @@ async def command_start(messange: types.Message):
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
     #await bot.send_message(messange.from_user.id, messange.text)
-    if messange.text == 'Замены':
+    if messange.text == 'Замены!':
         await bot.send_message(messange.from_user.id, pr.zaminka())
     elif messange.text == 'Расписание':
         await bot.send_message(messange.from_user.id, 'Выбери день мучений', reply_markup= nav.otherMenu)
@@ -28,9 +28,9 @@ async def bot_messange(messange: types.Message):
     elif messange.text == 'Среда':
         await bot.send_message(messange.from_user.id, pr.sreda())
     elif messange.text == 'Четверг':
-        await bot.send_message(messange.from_user.id, pr.chetverg() + "\n" + "Нахуй ты на четверг смотришь если ДО")
+        await bot.send_message(messange.from_user.id, pr.c
+        await bot.send_message(messange.from_user.id, pr.pyatnica())hetverg() + "\n" + "Нахуй ты на четверг смотришь если ДО")
     elif messange.text == 'Пятница':
-        await bot.send_message(messange.from_user.id, pr.pyatnica())
     elif messange.text == 'Суббота':
         await bot.send_message(messange.from_user.id, pr.sybbota())
     else:
