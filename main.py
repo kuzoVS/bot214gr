@@ -3,9 +3,10 @@ from aiogram import Bot, Dispatcher, executor, types
 import knopki as nav
 import ParserHTML.parser as pr
 import os
+
 bot = Bot(token= access_token)
 dp = Dispatcher(bot)
-access_token = os.getenv("ACCESS_TOKEN")
+access_token = os.environ['access_token']
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
