@@ -1,7 +1,7 @@
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 import knopki as nav
-import ParserHTML.parser as pr
+import parser as pr
 import os
 
 bot = Bot(token= access_token)
