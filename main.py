@@ -39,5 +39,3 @@ async def bot_messange(messange: types.Message):
 
 bot.polling(none_stop=True)
 
-#if __name__ == '__main__':
-    #executor.start_polling(dp, skip_updates= True)
