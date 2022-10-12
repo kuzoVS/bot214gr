@@ -2,10 +2,10 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 import knopki as nav
 import ParserHTML.parser as pr
-
-bot = Bot(token= '5643975948:AAFglFaqGKcXlQZcM-GP9xYqBRim_7Luv2Q')
+import os
+bot = Bot(token= access_token)
 dp = Dispatcher(bot)
-
+access_token = os.getenv("ACCESS_TOKEN")
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
@@ -36,7 +36,7 @@ async def bot_messange(messange: types.Message):
     else:
         await messange.reply('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки')
 
+bot.polling(none_stop=True)
 
-
-if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates= True)
+#if __name__ == '__main__':
+    #executor.start_polling(dp, skip_updates= True)
