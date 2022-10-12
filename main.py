@@ -28,9 +28,9 @@ async def bot_messange(messange: types.Message):
     elif messange.text == 'Среда':
         await bot.send_message(messange.from_user.id, pr.sreda())
     elif messange.text == 'Четверг':
-        await bot.send_message(messange.from_user.id, pr.c
-        await bot.send_message(messange.from_user.id, pr.pyatnica())hetverg() + "\n" + "Нахуй ты на четверг смотришь если ДО")
+        await bot.send_message(messange.from_user.id, pr.chetverg()+ "\n" + "Нахуй ты на четверг смотришь если ДО")
     elif messange.text == 'Пятница':
+        await bot.send_message(messange.from_user.id, pr.pyatnica())
     elif messange.text == 'Суббота':
         await bot.send_message(messange.from_user.id, pr.sybbota())
     else:
