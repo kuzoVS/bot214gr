@@ -25,8 +25,9 @@ def ponedelnik():
         predmet = vse_pari[den1].text.strip().replace("\n", "")
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
-        if predmet == " ":
-            para = "Пары нет" + str(para) + "\n" + str(predmet)
+        if predmet == "":
+            predmet = "Пары нет"
+            para = str(para) + "\n" + str(predmet)
 
         else:
             para = str(para) + "\n" + str(predmet)
@@ -35,7 +36,7 @@ def ponedelnik():
     den1 = den1
     return para
 def vtornik():
-    den1 = 12
+    den1 = 10
     den2 = 1
     den3 = 20
     para = ""
@@ -45,11 +46,12 @@ def vtornik():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            para = "Пары нет" + str(para) + "\n" + str(predmet)
+            predmet = "Пары нет"
+            para = str(para) + "\n" + str(predmet)
 
         else:
             para = str(para) + "\n" + str(predmet)
-        den1 = den1 + 2
+        den1 = den1 + 1
     para = str(den_nedeli) + "\n" + "\n" + str(para)
     den1 = den1
     return para
@@ -63,13 +65,14 @@ def sreda():
         predmet = vse_pari[den1].text.strip().replace("\n", "")
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
-        if predmet == " ":
-            para = "Пары нет" + str(para) + "\n" + str(predmet)
+        if predmet == "":
+            predmet = "Пары нет"
+            para = str(para) + "\n" + str(predmet)
 
         else:
             para = str(para) + "\n" + str(predmet)
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + str(para)
+    para = str(den_nedeli) + "\n" + "\n" + str(para)
     den1 = den1
     return para
 def chetverg():
@@ -82,8 +85,9 @@ def chetverg():
         predmet = vse_pari[den1].text.strip().replace("\n", "")
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
-        if predmet == " ":
-            para = "Пары нет" + str(para) + "\n" + str(predmet)
+        if predmet == "":
+            predmet = "Пары нет"
+            para = str(para) + "\n" + str(predmet)
 
         else:
             para = str(para) + "\n" + str(predmet)
@@ -101,8 +105,9 @@ def pyatnica():
         predmet = vse_pari[den1].text.strip().replace("\n", "")
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
-        if predmet == " ":
-            para = "Пары нет" + str(para) + "\n" + str(predmet)
+        if predmet == "":
+            predmet = "Пары нет"
+            para = str(para) + "\n" + str(predmet)
 
         else:
             para = str(para) + "\n" + str(predmet)
@@ -120,8 +125,9 @@ def sybbota():
         predmet = vse_pari[den1].text.strip().replace("\n", "")
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
-        if predmet == " ":
-            para = "Пары нет" + str(para) + "\n" + str(predmet)
+        if predmet == "":
+            predmet = "Пары нет"
+            para = str(para) + "\n" + str(predmet)
 
         else:
             para = str(para) + "\n" + str(predmet)
@@ -217,3 +223,5 @@ def zvonki():
 9. 16:35 - 17:20
 10. 17:25 - 18:10"""
     return zvonok
+
+print(vtornik())
