@@ -37,5 +37,6 @@ async def bot_messange(messange: types.Message):
     else:
         await messange.reply('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки')
 
-bot.polling(none_stop=True)
+if __name__ == '__main__':
+    executor.start_polling(dp, skip_updates=True)
 
