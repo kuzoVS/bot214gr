@@ -14,7 +14,7 @@ async def command_start(messange: types.Message):
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
     #await bot.send_message(messange.from_user.id, messange.text)
-    if messange.text == 'Замены!':
+    if messange.text == 'Замены':
         await bot.send_message(messange.from_user.id, pr.zaminka())
     elif messange.text == 'Расписание':
         await bot.send_message(messange.from_user.id, 'Выбери день мучений', reply_markup= nav.otherMenu)
