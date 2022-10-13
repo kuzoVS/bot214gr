@@ -28,10 +28,10 @@ def ponedelnik():
         den_nedeli = dni[den2].text
         if predmet == "":
             predmet = "Пары нет"
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
@@ -50,10 +50,10 @@ def vtornik():
         den_nedeli = dni[den2].text
         if predmet == "":
             predmet = "Пары нет"
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + "\n" + str(para)
@@ -72,10 +72,10 @@ def sreda():
         den_nedeli = dni[den2].text
         if predmet == "":
             predmet = "Пары нет"
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + "\n" + str(para)
@@ -94,10 +94,10 @@ def chetverg():
         den_nedeli = dni[den2].text
         if predmet == "":
             predmet = "Пары нет"
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
@@ -116,10 +116,10 @@ def pyatnica():
         den_nedeli = dni[den2].text
         if predmet == "":
             predmet = "Пары нет"
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
@@ -138,10 +138,10 @@ def sybbota():
         den_nedeli = dni[den2].text
         if predmet == "":
             predmet = "Пары нет"
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
-            para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = str(den_nedeli) + "\n" + str(para)
