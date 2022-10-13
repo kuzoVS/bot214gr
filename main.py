@@ -4,9 +4,9 @@ import knopki as nav
 import parser as pr
 import os
 
-bot = Bot(token= access_token)
+bot = Bot(token= "5643975948:AAFglFaqGKcXlQZcM-GP9xYqBRim_7Luv2Q")
 dp = Dispatcher(bot)
-access_token = os.environ['access_token']
+
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
