@@ -144,7 +144,7 @@ def sybbota():
             para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + str(para)
+    para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
     den1 = den1
     return para
 def zaminka():
