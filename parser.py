@@ -34,7 +34,7 @@ def ponedelnik():
             para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + str(para)
+    para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
     den1 = den1
     return para
 def vtornik():
@@ -56,7 +56,7 @@ def vtornik():
             para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + "\n" + str(para)
+    para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + "\n" + str(para)
     den1 = den1
     return para
 def sreda():
@@ -78,7 +78,7 @@ def sreda():
             para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + "\n" + str(para)
+    para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + "\n" + str(para)
     den1 = den1
     return para
 def chetverg():
@@ -100,7 +100,7 @@ def chetverg():
             para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + str(para)
+    para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
     den1 = den1
     return para
 def pyatnica():
@@ -122,7 +122,7 @@ def pyatnica():
             para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
-    para = str(den_nedeli) + "\n" + str(para)
+    para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(den_nedeli) + "\n" + str(para)
     den1 = den1
     return para
 def sybbota():
@@ -141,7 +141,7 @@ def sybbota():
             para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         else:
-            para = str(para) + "\n" + str(nomer) + ". " + str(predmet)
+            para = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" + str(para) + "\n" + str(nomer) + ". " + str(predmet)
             nomer = nomer + 1
         den1 = den1 + 1
     para = str(den_nedeli) + "\n" + str(para)
