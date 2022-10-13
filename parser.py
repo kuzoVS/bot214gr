@@ -27,7 +27,7 @@ def ponedelnik():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            predmet = "Пары нет"
+            predmet = "⠀⠀"
             para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
@@ -49,7 +49,7 @@ def vtornik():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            predmet = "Пары нет"
+            predmet = "⠀⠀"
             para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
@@ -71,7 +71,7 @@ def sreda():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            predmet = "Пары нет"
+            predmet = "⠀⠀"
             para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
@@ -93,7 +93,7 @@ def chetverg():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            predmet = "Пары нет"
+            predmet = "⠀⠀"
             para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
@@ -115,7 +115,7 @@ def pyatnica():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            predmet = "Пары нет"
+            predmet = "⠀⠀"
             para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
@@ -137,7 +137,7 @@ def sybbota():
         dni = rasp.find_all("span")
         den_nedeli = dni[den2].text
         if predmet == "":
-            predmet = "Пары нет"
+            predmet = "⠀⠀"
             para = str(para) + "\n" + str(nomer) + ".⠀⠀" + str(predmet)
             nomer = nomer + 1
         else:
@@ -235,5 +235,3 @@ def zvonki():
 9. 16:35 - 17:20
 10. 17:25 - 18:10"""
     return zvonok
-
-print(vtornik())
