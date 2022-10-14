@@ -35,7 +35,7 @@ async def bot_messange(messange: types.Message):
     elif messange.text == 'Суббота':
         await bot.send_message(messange.from_user.id, pr.sybbota())
     else:
-        await messange.reply('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки')
+        await messange.reply('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки', reply_markup= nav.mainMenu)
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
