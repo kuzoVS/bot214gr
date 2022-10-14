@@ -9,7 +9,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
-    await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
+    await bot.send_message(messange.from_user.id, 'Здрасте дети, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
 
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
@@ -27,19 +27,19 @@ async def bot_messange(messange: types.Message):
         await bot.send_message(messange.from_user.id, pr.zvonki())
         await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == 'Понедельник':
-        await bot.send_message(messange.from_user.id, pr.ponedelnik() + "\n" + "Всего две пары, ты уверен, что ты хочешь просто проебать время?🙄.")
+        await bot.send_message(messange.from_user.id, pr.ponedelnik() + "\n" + "Всего две пары, ты уверен, что ты хочешь просто потерять время?🙄.")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == 'Вторник':
-        await bot.send_message(messange.from_user.id, pr.vtornik() + "\n" + "Заебись, ко 2 паре, можно и поспать😴.")
+        await bot.send_message(messange.from_user.id, pr.vtornik() + "\n" + "Топ, ко 2 паре, можно и поспать😴.")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == 'Среда':
         await bot.send_message(messange.from_user.id, pr.sreda() + "\n" + "Типо дефолт😐.")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == 'Четверг':
-        await bot.send_message(messange.from_user.id, pr.chetverg() + "\n" + "Нахуй ты на четверг смотришь если ДО🙄.")
+        await bot.send_message(messange.from_user.id, pr.chetverg() + "\n" + "Зачем ты на четверг смотришь если ДО🙄.")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == 'Пятница':
-        await bot.send_message(messange.from_user.id, pr.pyatnica() + "\n" + "Четыре пары блять😭.")
+        await bot.send_message(messange.from_user.id, pr.pyatnica() + "\n" + "Четыре пары 🤬🤬🤬😭.")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == 'Суббота':
         await bot.send_message(messange.from_user.id, pr.sybbota() + "\n" + "Зачем вообще сегодня куда-то ехать?🥺")
