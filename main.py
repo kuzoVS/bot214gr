@@ -4,7 +4,8 @@ import knopki as nav
 import parser as pr
 import os
 
-bot = Bot(token= "5643975948:AAFglFaqGKcXlQZcM-GP9xYqBRim_7Luv2Q")
+bot = Bot(token= tokenb)
+tokenb = os.getenv("TOKEN")
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
