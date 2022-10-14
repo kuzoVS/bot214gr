@@ -11,18 +11,15 @@ dp = Dispatcher(bot)
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
 
-def delete_user_msg():
-    await bot.delete_message(messange.from_user.id, messange.message_id)
-
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
 
     if messange.text == 'Замены🔄':
         await bot.send_message(messange.from_user.id, pr.zaminka())
-        delete_user_msg()
+        await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == '📋':
         await bot.send_message(messange.from_user.id, 'Выбери день мучений😩.', reply_markup= nav.otherMenu)
-        delete_user_msg()
+        await bot.delete_message(messange.from_user.id, messange.message_id)
     elif messange.text == '⬅':
         await bot.send_message(messange.from_user.id,'⬅', reply_markup= nav.mainMenu)
         await bot.delete_message(messange.from_user.id, messange.message_id)
