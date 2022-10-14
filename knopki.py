@@ -1,10 +1,10 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-btnMain = KeyboardButton('Назад')
+btnMain = KeyboardButton('⬅')
 #Главные кнокпи
-btnRasp = KeyboardButton('Расписание')
-btnZam = KeyboardButton ('Замены')
-btnZvon = KeyboardButton('Звонки')
+btnRasp = KeyboardButton('📋')
+btnZam = KeyboardButton ('Замены🔄')
+btnZvon = KeyboardButton('🔔')
 mainMenu = ReplyKeyboardMarkup(resize_keyboard = True).add(btnRasp, btnZam, btnZvon)
 
 #Второстепенные кнопки
