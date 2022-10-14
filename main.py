@@ -13,7 +13,7 @@ async def command_start(messange: types.Message):
 
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
-    await bot.delete_message(messange.from_user.id, messange.message_id)
+    await bot.delete_message(messange.from_user.id, messange.message_id, reply_markup= nav.mainMenu)
     if messange.text == 'Замены🔄':
         await bot.send_message(messange.from_user.id, pr.zaminka())
     elif messange.text == '📋':
