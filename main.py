@@ -4,16 +4,16 @@ import knopki as nav
 import parser as pr
 import os
 
-bot = Bot(token= "5643975948:AAFglFaqGKcXlQZcM-GP9xYqBRim_7Luv2Q")
+tokenb = os.getenv("TOKEN")
+bot = Bot(token= tokenb)
 dp = Dispatcher(bot)
-
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте дети, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
 
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
-
+    durak = 0
     if messange.text == 'Замены🔄':
         await bot.send_message(messange.from_user.id, pr.zaminka())
         await bot.delete_message(messange.from_user.id, messange.message_id)
@@ -45,9 +45,7 @@ async def bot_messange(messange: types.Message):
         await bot.send_message(messange.from_user.id, pr.sybbota() + "\n" + "Зачем вообще сегодня куда-то ехать?🥺")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     else:
-        await messange.reply('Ты дурак? Зачем🤬 ты мне пишешь? Просто нажимай на кнопки.', reply_markup= nav.mainMenu)
-        await bot.delete_message(messange.from_user.id, messange.message_id)
-
+        await messange.reply('Ты дурак? Зачем ты мне пишешь? Просто нажимай на кнопки.')
    #...........................................Я НЕ ЗНАЮ КАК ВЫВЕСТИ ВОТ ЭТО, ТИПО ЕСЛИ ПОСЛЕ ЭТОГО ('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки') ПОЛЬЗОВАТЕЛЬ ОТПРАВЛЯЕТ ЕЩЕ СООБЩЕНИЕ, ТО ОН ВЫВЕДЕТ СЛЕДУЮЩЕЕ, НИЖЕ, ПОМОГИ ПОЖАЛУЙСТА!!!!!!!
    #await messange.reply('Повторяю для одаренного, не заебывай меня, я создан только расписания. Если тебе не с кем пообщаться, то это уже не мои проблемы🖕.')
 
