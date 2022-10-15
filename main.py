@@ -7,7 +7,7 @@ import os
 tokenb = os.getenv("TOKEN")
 bot = Bot(token= tokenb)
 dp = Dispatcher(bot)
-
+durak = 0
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте дети, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
@@ -46,8 +46,14 @@ async def bot_messange(messange: types.Message):
         await bot.send_message(messange.from_user.id, pr.sybbota() + "\n" + "Зачем вообще сегодня куда-то ехать?🥺")
         await bot.delete_message(messange.from_user.id, messange.message_id)
     else:
-        await messange.reply('Ты дурак? Зачем🤬 ты мне пишешь? Просто нажимай на кнопки.', reply_markup= nav.mainMenu)
-        await bot.delete_message(messange.from_user.id, messange.message_id)
+        if durak == 0:
+            await messange.reply('Ты дурак? Зачем🤬 ты мне пишешь? Просто нажимай на кнопки.', reply_markup= nav.mainMenu)
+            await bot.delete_message(messange.from_user.id, messange.message_id)
+            durak += 1
+        elif durak == 1:
+            await messange.reply('Повторяю для одаренного, не доставай меня, я создан показывать расписания. Если тебе не с кем пообщаться, то это уже не мои проблемы🙃.', reply_markup= nav.mainMenu)
+            await bot.delete_message(messange.from_us;er.id, messange.message_id)
+            durak -= 1
 
    #...........................................Я НЕ ЗНАЮ КАК ВЫВЕСТИ ВОТ ЭТО, ТИПО ЕСЛИ ПОСЛЕ ЭТОГО ('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки') ПОЛЬЗОВАТЕЛЬ ОТПРАВЛЯЕТ ЕЩЕ СООБЩЕНИЕ, ТО ОН ВЫВЕДЕТ СЛЕДУЮЩЕЕ, НИЖЕ, ПОМОГИ ПОЖАЛУЙСТА!!!!!!!
    #await messange.reply('Повторяю для одаренного, не заебывай меня, я создан только расписания. Если тебе не с кем пообщаться, то это уже не мои проблемы🖕.')
