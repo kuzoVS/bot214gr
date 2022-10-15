@@ -9,7 +9,7 @@ bot = Bot(token= tokenb)
 dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
-    await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
+    await bot.send_message(messange.from_user.id, 'Здрасте уебаны, вы расписание хотите,а оно вам надо?' + "\n" + 'Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
 
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
