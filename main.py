@@ -7,14 +7,13 @@ import os
 tokenb = os.getenv("TOKEN")
 bot = Bot(token= tokenb)
 dp = Dispatcher(bot)
-durak = 0
 @dp.message_handler(commands=['start'])
 async def command_start(messange: types.Message):
     await bot.send_message(messange.from_user.id, 'Здрасте дети, вы расписание хотите,а оно вам надо? \n Если вы все равно не пойдете на пары {0.first_name}'.format(messange.from_user), reply_markup= nav.mainMenu)
 
 @dp.message_handler()
 async def bot_messange(messange: types.Message):
-
+    durak = 0
     if messange.text == 'Замены🔄':
         await bot.send_message(messange.from_user.id, pr.zaminka())
         await bot.delete_message(messange.from_user.id, messange.message_id)
@@ -54,6 +53,7 @@ async def bot_messange(messange: types.Message):
             await messange.reply('Повторяю для одаренного, не доставай меня, я создан показывать расписания.\n Если тебе не с кем пообщаться, то это уже не мои проблемы🙃.', reply_markup= nav.mainMenu)
             await bot.delete_message(messange.from_us;er.id, messange.message_id)
             durak = durak - 1
+
 
    #...........................................Я НЕ ЗНАЮ КАК ВЫВЕСТИ ВОТ ЭТО, ТИПО ЕСЛИ ПОСЛЕ ЭТОГО ('Ты еблан? Нахуй ты мне пишешь? Просто нажимай на кнопки') ПОЛЬЗОВАТЕЛЬ ОТПРАВЛЯЕТ ЕЩЕ СООБЩЕНИЕ, ТО ОН ВЫВЕДЕТ СЛЕДУЮЩЕЕ, НИЖЕ, ПОМОГИ ПОЖАЛУЙСТА!!!!!!!
    #await messange.reply('Повторяю для одаренного, не заебывай меня, я создан только расписания. Если тебе не с кем пообщаться, то это уже не мои проблемы🖕.')
