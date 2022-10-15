@@ -50,7 +50,7 @@ async def bot_messange(messange: types.Message):
             await messange.reply('Ты дурак? Зачем🤬 ты мне пишешь? Просто нажимай на кнопки.', reply_markup= nav.mainMenu)
             await bot.delete_message(messange.from_user.id, messange.message_id)
             durak = durak + 1
-        elif durak == 1:
+        else:
             await messange.reply('Повторяю для одаренного, не доставай меня, я создан показывать расписания.\n Если тебе не с кем пообщаться, то это уже не мои проблемы🙃.', reply_markup= nav.mainMenu)
             await bot.delete_message(messange.from_us;er.id, messange.message_id)
             durak = durak - 1
